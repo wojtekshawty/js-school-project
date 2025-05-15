@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="display: flex">
+        <div class="box" id="result"></div>
+    </div>
+
+    <script>
+        var result = document.getElementById("result");
+
+        var spucha = new Array(" Gnuj", " Pażalsta", " Dabajob", " Bratuha");
+        result.innerHTML += spucha + "<br>";
+        console.log(spucha);
+
+        var tabela2 = new Array(4);
+
+        tabela2[0] = " 28";
+        tabela2[1] = " Pomocy";
+        tabela2[2] =  " true";
+        tabela2[3] = " Nienawidze Informatyki";
+        
+        console.log(tabela2)
+
+        var tabela3 = [" Nie", " Wiem", " Co", " Pisze"];
+        result.innerHTML += tabela3;
+
+        var tabela4 = (tabela2.concat(tabela3)).concat(spucha)
+
+        result.innerHTML += tabela4
+
+
+    </script>
+</body>
+</html>
