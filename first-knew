@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jebany JS</title>
+</head>
+<body>
+
+    <div style="display: flex"><div id="result" class="box">Wynik: </div>
+    <script>
+        //tablica
+        var result = document.getElementById("result");
+
+        var tablica = new Array("Poniedziałek", "Wtorek", "Środa");
+        result.innerHTML += tablica[0] + "<br>";
+        tablica[3] = "Czwartek";
+        tablica[4] = "Piątek";
+        tablica[6] = "Niedziela";
+        result.innerHTML += tablica[3] + "<br>";
+        tablica[5] = "Sobota";
+        result.innerHTML += "Długość = " + tablica.length + "<br>";
+
+
+
+        console.log(tablica);
+
+        result.innerHTML += "<br>-------------------------<br><br>";
+
+        for (var i = 0; i < tablica.length; i++)
+        {
+            result.innerHTML += tablica[i] + "<br>";
+        }
+
+        tablica.forEach(x => console.log(x));
+
+        var tablica2 = new Array(3);
+
+        tablica2[0] = 10;
+        tablica2[1] = true;
+        tablica2[2] = "JavaScript";
+
+        console.log(tablica2);
+
+        var tablica3 = ["Wiosna", "Lato", "Jesień", "Zima"];
+        console.log(tablica3);
+
+        var tablica4 = (tablica.concat(tablica2)).concat(tablica3);
+        result.innerHTML += tablica4
+        console.log(tablica4)
+        
+    </script>
+</body>
+</html>
