@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function _(){document.write("<br><br>");}
+
+        
+        //wypisanie tabeli
+        tab = [0,2,666,2137,10]
+        document.write(tab+"<br>"); _()
+        
+        //ładniej
+        for(i=0;i<tab.length;i++)
+        document.write(tab[i]+"; "+"<br>"); _()
+
+        //obliczenia
+        suma=0; min=max=tab[0]
+        for (i=0;i<tab.length;i++) {
+            document.write(i+"; "+tab[i]+"<br>")
+            suma +=tab[i]
+            if(tab[i]<min) min=tab[i]
+            if(tab[i]>max) max=tab[i]
+        } _()
+        document.write("suma: "+suma+ "<br>średnia: "+suma/tab.length+"<br>min: "+min+"<br>max: "+max+"<br>"); _()
+
+        //wypisane ładniej
+        const liczby = [1,5,2,666,3,69,429,2137]
+        for(i=0;i<liczby.length;i++)
+        document.write(i+". element: "+liczby[i]+"<br>"); _()
+            
+        //bąbelkowe
+        for(j=0;j<liczby.length-1;j++) {
+            for(i=0;i<liczby.length-1;i++) {
+                if(liczby[i]>liczby[i-1]) {
+                    temp=liczby[i]
+                    liczby[i]-liczby[i-1]
+                    liczby[i-1]-temp
+                }
+            }
+        }
+        for(i=0;i<liczby.length;i++) {
+        document.write(i+". element: "+liczby[i]+"<br>"); _()
+        }
+
+        //wypisanie
+        tabela = [1,2,3,7,0];
+        document.write(tabela+"<br>");
+        for(i=0;i<tabela.length;i++)
+        document.write(tabela[i]+": "); _()
+
+        //malejąco
+        tabela.sort(function (a,b){return b-a});
+        tabela.forEach(function (x) {document.write(x+"; ")}); _()
+
+        //suma
+        wynik=0
+        for(i=0;i<tabela.length;i++)
+        if((tabela[i]%2))
+        wynik += tabela[i]
+        document.write("suma nieparzystych: "+wynik); _()
+
+        //największa
+        var największa = tabela[0]
+        for(i=1;i<tabela.length;i++)
+        if(tabela[i]>największa)
+        największa = tabela[i]
+        document.write("największa: "+największa); _()
+
+        //co 5
+        liczba=0
+        for(i=0;i<=5;i++) {
+            liczba += 5
+            document.write(liczba+"<br>")
+        }
+
+        //wybieranie
+document.write(tab); _()
+tab.forEach((x) => document.write(x+"; "))
+
+for(i=0; i<tab.length-1; i++) {
+    for(j=i+1; j<tab.length; j++) {
+        if(tab[i] > tab[j]) {
+            temp = tab[i];
+            tab[i] = tab[j];
+            tab[j] = temp;
+        }
+    }
+}
+document.write("<br> Posortowane: "+tab); _()
+</script>
