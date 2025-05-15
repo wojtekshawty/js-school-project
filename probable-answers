@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kartkówka z pętli i if-else</title>
+</head>
+<body>
+<script>
+    // 1. Pętla: wypisz 10 razy "linia X: psikuta"
+    for (i = 1; i <= 10; i++) {
+        document.write("linia " + i + ": psikuta<br>");
+    }
+
+    document.write("<br>");
+
+    // 2. Warunek: sprawdź, czy x > y
+    x = 7;
+    y = 5;
+
+    if (x > y) {
+        document.write("liczba x jest większa od liczby y<br>");
+    } else if (x < y) {
+        document.write("liczba x jest mniejsza od liczby y<br>");
+    } else {
+        document.write("liczba x jest równa liczbie y<br>");
+    }
+
+    document.write("<br>");
+
+    // 3. Pętla: wypisz tylko liczby parzyste z tablicy
+    tab = [1, 2, 5, 4, 10, 11]; // nie wiemy ile tu elementów
+
+    document.write("Liczby parzyste z tablicy: ");
+    for (i = 0; i < tab.length; i++) {
+        if (tab[i] % 2 === 0) {
+        document.write(tab[i] + " ");
+        }
+    }
+</script>
+</body>
+</html>
